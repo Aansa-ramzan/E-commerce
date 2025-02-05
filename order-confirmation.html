@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Order Confirmation</title>
+</head>
+<body>
+    <header>
+        <div>
+            <a href="index.html" style="text-decoration: none; color: inherit;">
+                <img src="logo.jfif" style="width: 25px; height: 25px;" /> Sneakers
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" target="_top">Home</a></li>
+                <li><a href="features.html" target="_top">Features</a></li>
+                <li><a href="products-page-1.html" target="_top">Products</a></li>
+                <li><a href="contact.html" target="_top">Contact</a></li>
+                <li><a href="cart.html" target="_top">Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="order-confirmation">
+        <h2>Thank You for Your Order!</h2>
+        <p>Your order has been successfully placed. Below are the details of your order.</p>
+        
+        <div id="order-details">
+            <!-- Order details will be inserted here by JavaScript -->
+        </div>
+
+        <p><strong>Total Amount: Rs. <span id="total-amount">0</span></strong></p>
+
+        <button id="go-back-btn">Go Back to Products</button>
+    </section>
+
+    <footer>
+        <iframe src="footer.html" style="border:none; width: 100%; height: 107px;"></iframe>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cartCountElement = document.getElementById('cart-count');
+            if (!cartCountElement) {
+                console.error('Cart count element not found!');
+                return;
+            }
+     
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+            cartCountElement.textContent = totalItems;
+        });
+     </script>
+    <script src="orderConfirmation.js"></script>
+</body>
+</html>

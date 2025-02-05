@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo.jfif" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <title>Products - Page 1</title>
+</head>
+<body>
+    <header>
+        <div>
+            <a href="index.html" style="text-decoration: none; color: inherit;">
+                <img src="logo.jfif" style="width: 25px; height: 25px;"/> Sneakers
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" target="_top">Home</a></li>
+                <li><a href="features.html" target="_top">Features</a></li>
+                <li><a href="products-page-1.html" target="_top">Products</a></li>
+                <li><a href="contact.html" target="_top">Contact</a></li>
+                <li><a href="cart.html" target="_top">Cart (<span id="cart-count">0</span>)</a></li>
+                
+            </ul>
+        </nav>
+        </header>
+    
+    <section id="products" class="products-section">
+        <h2>Our Products</h2>
+        <div class="products-container">
+            <div class="product-item">
+                <img src="images/pic.jfif" alt="Sneakers">
+                <h2>Black & White Sneakers</h2>
+                <p>Rs. 3300</p>
+                <button class="add-to-cart-btn" data-id="1" data-name="Black & White Sneakers" data-price="3300">Add to Cart</button>
+            <a href="cart.html?productId=1&action=buyNow" class="btn buy-now-btn">Buy Now</a>
+            </div>
+            <div class="product-item">
+                <img src="images/pic1.jfif" alt="Sneakers">
+                <h2>Black Sneakers</h2>
+                <p>Rs. 3100</p>
+                <button class="add-to-cart-btn" data-id="2" data-name="Black Sneakers" data-price="3100">Add to Cart</button>
+            <a href="cart.html?productId=2&action=buyNow" class="btn buy-now-btn">Buy Now</a>
+            </div>
+            <div class="product-item">
+                <img src="images/pci2.jfif" alt="Sneakers">
+                <h2>Black Sneakers</h2>
+                <p>Rs. 3600</p>
+                <button class="add-to-cart-btn" data-id="3" data-name="Black Sneakers" data-price="3600">Add to Cart</button>
+            <a href="cart.html?productId=3&action=buyNow" class="btn buy-now-btn">Buy Now</a>
+            </div>
+            <div class="product-item">
+                <img src="images/pic3.jfif" alt="Sneakers">
+                <h2>White Sneakers</h2>
+                <p>Rs. 3300</p>
+                <button class="add-to-cart-btn" data-id="4" data-name="White Sneakers" data-price="3300">Add to Cart</button>
+            <a href="cart.html?productId=4&action=buyNow" class="btn buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+        <div class="see-more">
+            <a href="products-page-2.html" class="btn">See More</a>
+        </div>
+    </section>
+    
+    <footer>
+        <iframe src="footer.html" style="border:none; width: 100%; height: 107px;"></iframe>
+    </footer>
+    <script src="cart.js"></script>
+</body>
+</html>
